@@ -10,6 +10,8 @@ from keyboards.inline.zapis_inline import get_services_keyboard, get_keyboards, 
 from keyboards.inline.menu_inline import get_about_keyboard
 from handlers.users.start import user_language
 
+pymysql.install_as_MySQLdb()
+
 # Инициализация соединения с базой данных
 conn = pymysql.connect(
     host=DATABASES['default']['HOST'],
